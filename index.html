@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>test</title>
+</head>
+<style>
+html,body{margin:0;padding:0;box-sizing:border-box;background-color:#000}
+video{display:none;width:100%;height:100vh;}
+video.pressed{display:block}
+</style>
+<body>
+	<video id="1" src="../cha/video/video1.mp4" autoplay loop muted></video>
+	<video id="2" src="../cha/video/video2.mp4" autoplay loop muted></video>
+	<video id="3" src="../cha/video/video3.mp4" autoplay loop muted></video>
+	<video id="4" src="../cha/video/video4.mp4" autoplay loop muted></video>
+	<video id="5" src="../cha/video/video5.mp4" autoplay loop muted></video>
+	<video id="6" src="../cha/video/video6.mp4" autoplay loop muted></video>
+	<video id="7" src="../cha/video/video7.mp4" autoplay loop muted></video>
+	<video id="8" src="../cha/video/video8.mp4" autoplay loop muted></video>
+</body>
+</html>
+<script>
+	window.addEventListener("keydown", e => {
+		document.querySelectorAll('video').forEach(item => {
+			item.classList.remove('pressed');
+		})
+		const key = document.getElementById(e.key);
+		if (key) key.classList.add('pressed');
+	});
+</script>
